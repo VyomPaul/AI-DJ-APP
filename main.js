@@ -1,4 +1,5 @@
-
+leftWrist = 0;
+status = "";
 rightWristY = 0;
 rightWristX = 0;
 leftWristY = 0;
@@ -14,6 +15,7 @@ function modelLoaded() {
 }
 
 function gotPoses() {
+    results[0].pose.keypoints[9].score;
     if(results.length > 0) {
         leftWristX = results[0].pose.leftWrist.x;
         leftWristY = results[0].pose.leftWrist.y;
@@ -23,4 +25,8 @@ function gotPoses() {
         rightWristY = results[0].pose.rightWrist.y;
         console.log("rightWristX = " + rightWristX + "rightWristY = " + rightWristY);
     }
+}
+
+function draw() {
+    
 }
